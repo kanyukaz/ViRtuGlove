@@ -1,4 +1,4 @@
-At present, the repository contains the following STL files:
+At present, the folder contains the following STL files:
   - Digit Plate Base.stl - a model for reliably mouting the gyroscope to the user's digit
   - Digit Plate Lid.stl - a model that rests on top of the Digit Plate Base model and provides 
     a small conduit for the haptic feedback cable (The conduit must be drilled in the upper lobe after printing. )
@@ -8,3 +8,9 @@ At present, the repository contains the following STL files:
   
   A single prototype of each was printed. The servo lobe model was rejected, whereas the digit plate models were accepted. 
   However, the latter could not be printed in sufficient quantities for use in the project submission milestone. 
+
+
+Additionally, the folder contains the following circuit schematics for the key components of the project:
+  - Gyro Manipulation Board_schem.png - schematic of the gyroscope management board on the hand unit
+  - Servo Manipulation Board_schem.png - schematic of the servo management board ont he servo unit
+  - Microcontroller Adapter Board_schem.png - schematic for the custom shield placed on the Arduino MEGA
