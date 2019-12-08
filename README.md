@@ -6,6 +6,7 @@ This goal of this project to create a haptic feedback glove that can be used wit
 Currently, the project does not have full integration with a VR system, but does include functioning (albeit in need of minor debugging) systems for exchanging sensor and actuator signals with a host computer. Please see the /src folder for my Arduino sketch and a companion script for Unity3D. These scripts provide a foundation for integration with a variety of VR interfaces.
 
 ![alt text][pic1]
+
 [pic1]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/prototype.jpg "Logo Title Text 2"
 
 Repository Contents
@@ -83,7 +84,8 @@ Early design of the project relied on the possibility of 3D printing structural 
 I used hot glue to mount the gyroscope communication board atop the haptic feedback bracket. The schematic diagram for the board can be found below. The board consists of five Adafruit L3GD20 3DOF gyroscope breakout boards permanently connected to the communication board through 4-line ribbon cables. Each such cable has SCL and SDA lanes for I2C communication, a Vin lane, and a ground lane. Additionally, an Adafruit 9DOF sensor breakout board which includes a L3GD20 gyroscope has been mounted directly on the gyroscope communication board. It can serve as a reference point for the other gyroscopes.  Its additional accelerometers have not been implemented in this project, but remain an open for future development. The electronic components implemented on the gyroscope communication board use I2C for communicating with the microcontroller. Because all L3GD20H gyroscopes used share the same I2C address, they are managed with an Adafruit TCA9548A I2C multiplexer digital breakout board. Each sensor's I2C pins are linked to respective corresponding pins on the multiplexer. All of the breakout boards use the shared Vin and ground rails. As previously mentioned, this unit connects to the other units through cable B.
 
 ![alt text][pic2]
-[pic1]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/GYRO.png "Logo Title Text 2"
+
+[pic2]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/GYRO.png "Logo Title Text 2"
 
 **Servomotor unit**
 
@@ -92,14 +94,16 @@ To facilitate mounting on the lower arm, a short sleeve fashioned out of another
 The servomotor control board integrates two key functions of the prototype - management of haptic feedback and assessment of resistive contractile strength. The schematic diagram for the board can be found below. The board has five three-pin male headers common among shields made for servomotors. Each header has ground pin, a Vin pin, and a PWM communication pin. The five INA169 current sensors serve as a proxy between the servo headers' Vin pins and the global Vin power rail. This allows them to monitor the current drawn by the servomotors. The current sensors have Vin, ground, and analog signal pins, as well as the pins between which the current is measured and travels to the servos headers. The servo header PWM pins and the current sensors' analogue pins make a direct and exclusive connection with the the corresponding pins on the microcontroller through the cable A link. The board additionally serves as a pass-through to the hand unit, to which it is connected via cable B.
 
 ![alt text][pic3]
-[pic1]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/SERVO.png "Logo Title Text 2"
+
+[pic3]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/SERVO.png "Logo Title Text 2"
 
 **Microcontroller unit**
 
 The Arduino MEGA microcontroller board is mounted to the user's upper arm with an adjustable elastic armband. The outward surface of the custom-made shield consists solely of the female connector for cable A. The schematic diagram for the shield can be found below. On the flip-side, the female connector's pins are connected as follows: five analogue lines used for current sensors are connected to analogue pins 0-4; five PWM lines used for servo control and the expansion digital pin are connected to digital pins 2-6 and 7 respectively; and the Vin rail and ground rail lines are connected to Vin and ground pins respectively. As explained before, this unit is used for handling communication to the host via USB, managing the supply of power, and mediating the transducers. I have included further information on the firmware used by the microcontroller in the sections below. 
   
 ![alt text][pic4]
-[pic1]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/MICRO.png "Logo Title Text 2"
+
+[pic4]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/MICRO.png "Logo Title Text 2"
 
 Usage
 =====
