@@ -1,0 +1,5 @@
+The images present in this folder as follows:
+* prototype.jpg - a photo of the completed prototype
+* GYRO.png - the circuit schematic for the gyroscope management board
+* SERVO.png - the circuit schematic for the servomotor control board
+* MICRO.png - circuit schematic for the Arduino MEGA shield used
