@@ -1,4 +1,4 @@
-# ViRtuGlove
+# ViRtuGlove 0.9
 This goal of this project to create a haptic feedback glove that can be used with consumer virtual reality (VR) systems. Presently, the project employs the following core features:
 * 3 D0F rotational acceleration tracking for each digit (and for the hand to serve as a reference)
 * anti-contractile haptic feedback for each digit
