@@ -3,28 +3,32 @@ This goal of this project to create a haptic feedback glove that can be used wit
 * 3 D0F rotational acceleration tracking for each digit (and for the hand to serve as a reference)
 * anti-contractile haptic feedback for each digit
 * assessment of contractile resistance against the haptic feedback system
+
 Currently, the project does not have full integration with a VR system, but does include functioning (albeit in need of minor debugging) systems for exchanging sensor and actuator signals with a host computer. Please see the /src folder for my Arduino sketch and a companion script for Unity3D. These scripts provide a foundation for integration with a variety of VR interfaces.
 
 ![alt text][pic1]
 
-[pic1]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/prototype.jpg "Logo Title Text 2"
+[pic1]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/prototype.jpg "VR Glove"
 
 Repository Contents
 ============
 Here's where you'll provide a map of all the top-level contents (where applicable):
 
-* **/src** - the Arduino sketch, the companion script for Unity3D, and code used for debugging
+* **/documentation** - documentation for this project and its predecessor
 * **/hardware** - models for the unused part prototypes and circuit schematics to summarize the electronic boards that I have built
-* **/libraries** - the libraries for presently used versions of Adafruit sensor libraries (keeps the code functional in case current versions are not available in the future, and future versions are not backwards compatible).
 * **/img** - images for the readme, including a product photo and circuit schematic diagrams.
-* **/LICENSE** - The license file.
-* **/README.md** - The file you're reading now! :-D
+* **/libraries** - the libraries for presently used versions of Adafruit sensor libraries (keeps the code functional in case current versions are not available in the future, and future versions are not backwards compatible).
+* **/scr** - the Arduino sketch, the companion script for Unity3D, and code used for debugging
+
+* **LICENSE** - The license file.
+* **README.md** - The file you're reading now! :-D
 
 Requirements and Materials
 ============
 Dependencies:
 * Adafruit Unified Sensor library V1.0.3
 * Adafruit L3GD20 U Sensor library V1.01
+
 Both of these are available through Arduino IDE's built-in library manager, but backups are included in the /libraries section
 
 Bill of Materials:
@@ -85,7 +89,7 @@ I used hot glue to mount the gyroscope communication board atop the haptic feedb
 
 ![alt text][pic2]
 
-[pic2]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/GYRO.png "Logo Title Text 2"
+[pic2]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/GYRO.png "Hand unit board circuit schematic"
 
 **Servomotor unit**
 
@@ -95,7 +99,7 @@ The servomotor control board integrates two key functions of the prototype - man
 
 ![alt text][pic3]
 
-[pic3]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/SERVO.png "Logo Title Text 2"
+[pic3]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/SERVO.png "Servomotor unit board circuit schematic"
 
 **Microcontroller unit**
 
@@ -103,7 +107,7 @@ The Arduino MEGA microcontroller board is mounted to the user's upper arm with a
   
 ![alt text][pic4]
 
-[pic4]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/MICRO.png "Logo Title Text 2"
+[pic4]: https://github.com/kanyukaz/ViRtuGlove/blob/master/img/MICRO.png "Microcontroller unit shield circuit schematic"
 
 Usage
 =====
