@@ -12,7 +12,6 @@ Currently, the project does not have full integration with a VR system, but does
 
 Repository Contents
 ============
-Here's where you'll provide a map of all the top-level contents (where applicable):
 
 * **/documentation** - documentation for this project and its predecessor
 * **/hardware** - models for the unused part prototypes and circuit schematics to summarize the electronic boards that I have built
